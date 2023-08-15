@@ -55,3 +55,7 @@ ul {
 .col {
   text-align: center;
 }
+.outsource {
+  position: relative;
+  left: 10px;
+}
