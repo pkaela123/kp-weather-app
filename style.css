@@ -1,3 +1,6 @@
+body {
+  background: #d2a87e;
+}
 form {
   margin-top: 15px;
   position: relative;
@@ -27,6 +30,7 @@ ul {
   padding-bottom: 40px;
   padding-left: 25px;
   padding-right: 25px;
+  background: #ffe9c1;
 }
 .current-temperature {
   position: relative;
@@ -48,9 +52,11 @@ ul {
 .weekdays {
   position: relative;
   top: 15px;
+  background: #ffe9c1;
 }
 .card-body.weekBoxEdit {
   margin-bottom: 0px;
+  background: #ffe9c1;
 }
 .col {
   text-align: center;
