@@ -15,15 +15,13 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="card application">
-        <div class="card-body structure-detail">
-          <form id="search-form">
-            <input
+    <header>
+      <form>
+          <input
               type="text"
               placeholder="Enter a city"
               class="form-control-md"
-              id="search-city-input"
+              
               required
             />
             <input
@@ -31,34 +29,12 @@
               value="Search"
               class="btn btn-outline-secondary btn-sm"
             />
-          </form>
-          <div class="row">
-            <div class="col-6 current-temperature">
-              <h1 id="city"></h1>
-              <p id="date">Tuesday</p>
-              <h2 id="temperature">
-                <span class="units">
-                  <a href="#" id="celsius-link">°C </a>
-                </span>
-              </h2>
-              <p id="description">Sunny ☀️</p>
-              <p class="highlow">High: 60°F | Low: 42°F</p>
-            </div>
-            <div class="col-6 weather-details">
-              <ul>
-                <li>Precipitation: 0%</li>
 
-                <li>Wind: 5mph</li>
-
-                <li>Humidity: 47%</li>
-
-                <li>Sunrise: 7:26am EST</li>
-
-                <li>Sunset: 5:44pm EST</li>
-              </ul>
-            </div>
-          </div>
-          <div class="card weekdays">
+      </form>
+    </header>
+    <main>
+      <h1> City Name</h1>
+        <div class="card weekdays">
             <div class="card-body weekBoxEdit">
               <div class="row">
                 <div class="col">
@@ -100,12 +76,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </main>
     <div class="opensource">
       <a href="https://github.com/pkaela123/kp-weather-app" target="_blank"
         >Open-source Code</a
