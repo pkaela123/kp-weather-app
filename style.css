@@ -25,12 +25,9 @@ h1 {
 .weekdays {
   position: relative;
   top: 15px;
-  background: #ffe9c1;
+  background: #f7e7ce;
 }
-.card-body.weekBoxEdit {
-  margin-bottom: 0px;
-  background: #ffe9c1;
-}
+
 .col {
   text-align: center;
 }
