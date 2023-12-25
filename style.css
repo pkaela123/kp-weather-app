@@ -35,11 +35,15 @@ h1 {
   position: relative;
   top: 15px;
   background: #f7e7ce;
+  border: none;
 }
 
 .col {
   text-align: center;
 }
-.opensource {
+footer {
+  padding: 16px 0 0 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
   text-align: center;
 }
