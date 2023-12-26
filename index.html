@@ -23,12 +23,13 @@
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
             type="text"
             placeholder="Enter a city"
             class="form-control-md search-form-input"
             required
+            id="search-form-input"
           />
           <input
             type="submit"
@@ -40,7 +41,7 @@
       <main>
         <div class="weather-app-data">
           <div>
-            <h1 class="weather-city">City Name</h1>
+            <h1 class="weather-city" id="city">City Name</h1>
             <p class="weather-details">
               Tuesday 3:45pm
               <br />
@@ -59,7 +60,7 @@
         <div class="weather-forecast">
           <div class="forecast-day">
             <div>Wed</div>
-            <img src="🌤" />
+            <img src="" />
             <div class="forecast-temperature">
               <span class="max-temp">51°|</span>
               <span class="min-temp">38°</span>
@@ -67,7 +68,7 @@
           </div>
           <div class="forecast-day">
             <div>Thurs</div>
-            <img src="🌥" />
+            <img src="" />
             <div class="forecast-temperature">
               <span class="max-temp">51°|</span>
               <span class="min-temp">38°</span>
@@ -75,7 +76,7 @@
           </div>
           <div class="forecast-day">
             <div>Fri</div>
-            <img src="🌦" />
+            <img src="" />
             <div class="forecast-temperature">
               <span class="max-temp">51°|</span>
               <span class="min-temp">38°</span>
@@ -83,7 +84,7 @@
           </div>
           <div class="forecast-day">
             <div>Sat</div>
-            <img src="🌧" />
+            <img src="" />
             <div class="forecast-temperature">
               <span class="max-temp">51°|</span>
               <span class="min-temp">38°</span>
