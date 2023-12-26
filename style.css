@@ -35,13 +35,34 @@ form {
 .weather-city {
   margin: 0;
   font-size: 30px;
+  font-weight: 600;
   line-height: 68px;
 }
 
 .weather-details {
   font-size: 14px;
+  font-weight: 500;
   line-height: 20px;
   color: rgba(0, 0, 0, 0.6);
+}
+strong {
+  color: #95675b;
+}
+.weather-app-temperature {
+  display: flex;
+}
+.weather-app-valuetemp {
+  font-size: 65px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.weather-app-icon {
+  font-size: 35px;
+  margin-top: 26px;
+}
+.weather-app-unit {
+  margin-top: 20px;
+  font-size: 30px;
 }
 .weekdays {
   position: relative;
@@ -55,4 +76,7 @@ footer {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
   text-align: center;
+}
+a {
+  color: #95675b;
 }
