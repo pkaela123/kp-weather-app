@@ -64,12 +64,7 @@ strong {
   margin-top: 20px;
   font-size: 30px;
 }
-.weather-forecast {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 20px 0 20px 0;
-  margin-top: 25px;
-}
+
 .forecast-temperature {
   display: flex;
 }
