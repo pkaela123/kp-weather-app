@@ -26,7 +26,11 @@ form {
   width: 75px;
   background: #ecd7bc;
 }
-
+header {
+  border-bottom: 1px solid #f9f1f0;
+  padding: 0 0 30px 0;
+  margin-bottom: 12px;
+}
 .weather-app-data {
   display: flex;
   justify-content: space-between;
@@ -70,8 +74,10 @@ strong {
   display: flex;
 }
 footer {
-  padding: 16px 0 0 0;
-  margin-top: 25px;
+  border-top: 1px solid #f9f1f0;
+  padding: 21px 0 0 0;
+
+  margin-top: 35px;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
   text-align: center;
