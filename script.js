@@ -7,12 +7,10 @@ function updateWeather(response) {
   let windElement = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.dt * 1000);
-
-  let iconImage = document.querySelector("#icon");
-
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+  let iconElement = document.querySelector("#icon");
 
   console.log(response.data);
+  iconElement.innerHTML = `<img src=" https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png" class="weather-app-icon" />`;
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   timeElement.innerHTML = formatDate(date);
@@ -60,3 +58,5 @@ function search(event) {
 }
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
+
+searchCity("New London");

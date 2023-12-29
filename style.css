@@ -54,14 +54,15 @@ strong {
 .weather-app-valuetemp {
   font-size: 65px;
   font-weight: 600;
-  margin-left: 10px;
+  margin-left: 7px;
+  margin-top: 14px;
 }
 .weather-app-icon {
   font-size: 35px;
-  margin-top: 26px;
+  margin-top: 6px;
 }
 .weather-app-unit {
-  margin-top: 20px;
+  margin-top: 29px;
   font-size: 30px;
 }
 
