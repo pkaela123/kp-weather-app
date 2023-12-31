@@ -81,6 +81,10 @@ strong {
 .forecast-date {
   font-size: 14px;
 }
+
+.forecast-icon {
+  width: 100%;
+}
 .forecast-temperature {
   font-size: 14px;
 }

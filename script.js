@@ -17,6 +17,8 @@ function updateWeather(response) {
   humidityElement.innerHTML = `${response.data.main.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
+
+  getForecast(response.data.coord);
 }
 
 function formatDate(date) {
@@ -57,29 +59,41 @@ function search(event) {
   searchCity(searchInput.value);
 }
 
-function getForecast(city) {
-  let apiKey = "4o2e9b0f3aa41b8c28fe25f31t1b305e";
-  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
+function getForecast(coords) {
+  let apiKey = "f5029b784306910c19746e40c14d6cd3";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
 }
 
 function displayForecast(response) {
-  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `<div class="weather-forecast-day">  
-              <div class="forecast-date">${day}</div>
-              <div class="forecast-icon"> ⛅️</div>
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `<div class="weather-forecast-day">  
+              <div class="forecast-date">${formatDay(day.dt)}</div>
+              
+              <img src="https://openweathermap.org/img/wn/${
+                day.weather[0].icon
+              }@2x.png" class="forecast-icon"/>
+              
               <div class="forecast-temperature">
                 <span class="max-temp">
-                <strong>51°</strong>|</span>
-                <span class="min-temp">38°</span>
+                <strong>${Math.round(day.temp.max)}°</strong>|</span>
+                <span class="min-temp">${Math.round(day.temp.min)}°</span>
               </div>
             </div>
           `;
+    }
   });
 
   let forecastElement = document.querySelector("#forecast");
@@ -90,5 +104,3 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
 searchCity("New London");
-getForecast("New London");
-displayForecast();
