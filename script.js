@@ -57,7 +57,13 @@ function search(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "4o2e9b0f3aa41b8c28fe25f31t1b305e";
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+}
+
+function displayForecast(response) {
   let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
 
@@ -84,4 +90,5 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
 searchCity("New London");
+getForecast("New London");
 displayForecast();
