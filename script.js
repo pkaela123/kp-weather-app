@@ -56,7 +56,32 @@ function search(event) {
 
   searchCity(searchInput.value);
 }
+
+function displayForecast() {
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="weather-forecast-day">  
+              <div class="forecast-date">${day}</div>
+              <div class="forecast-icon"> ⛅️</div>
+              <div class="forecast-temperature">
+                <span class="max-temp">
+                <strong>51°</strong>|</span>
+                <span class="min-temp">38°</span>
+              </div>
+            </div>
+          `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
 searchCity("New London");
+displayForecast();
